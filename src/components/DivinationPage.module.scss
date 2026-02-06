@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 567px;
+  aspect-ratio: 567 / 392;
+  background: #000000;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.baguaContainer {
+  position: absolute;
+  top: 17%; /* 66 / 392 */
+  left: 47%; /* 267 / 567 */
+  width: 44%; /* 252 / 567 */
+  height: 65%; /* 255 / 392 */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bagua {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotating {
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text {
+  position: absolute;
+  top: 45%; /* 176 / 392 approx */
+  left: 7%; /* 41 / 567 */
+  width: 35%; /* 200 / 567 */
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #ffffff;
+  font-family: STXingkai, serif;
+  font-size: clamp(24px, 5vw, 40px);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
